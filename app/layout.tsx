@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html data-theme="" lang="en"> {/*todo:Add change theme func*/}
+    <html data-theme="mytheme" lang="en"> {/*todo:Add change theme func*/}
       <Providers>
         <body className="">{children}</body>
       </Providers>

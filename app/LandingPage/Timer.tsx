@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
+import { signIn, useSession } from "next-auth/react";
 
 function Timer() {
   const [hours, setHours] = useState<number>(0);
@@ -25,7 +26,6 @@ function Timer() {
           }
           return newSeconds;
         });
-      
       }, 1000);
     
   }
@@ -35,10 +35,6 @@ function Timer() {
     clearInterval(TimeRef.current);
     setTimerStatus(false)
     
-  }
-
-  const handleFinish = () => {
-
   }
 
   return (
@@ -72,7 +68,7 @@ function Timer() {
         </button>
         {
           (seconds > 0 || minutes > 0 || hours > 0) &&
-          <button onClick={handleEnd} className="btn btn-secondary ml-4">
+          <button onClick={()=>signIn()} className="btn btn-secondary ml-4">
               finish
           </button>
         } 

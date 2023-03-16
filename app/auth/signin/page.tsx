@@ -1,27 +1,21 @@
-"use server"
-import { getProviders, getSession, signIn } from 'next-auth/react'
-import { redirect } from 'next/navigation'
+
 import React from 'react'
-import { Button } from '@/components/Button'
 import ProviderButton from "@/components/auth/ProviderButton"
-
+import SessionWrapper from './SessionWraper'
+import AuthProviders from './AuthProviders'
+import { getSession } from 'next-auth/react'
+export const revalidate = 1;
 async function page() {
-    const providers = await getProviders()
-    const session = await getSession()
-
-    if(session?.user)redirect("/")
-
+  const session = await getSession()
+  if(!session?.user)
   return (
-    <div className='min-h-screen w-screen flex flex-col justify-center items-center'>
-          <div className="p-3 bg-slate-600 rounded-xl flex ">
-            {Object.values(providers!).map((provider) => (
-              <div className='m-5' key={provider?.name}>
-                <ProviderButton provider={provider} />
-              </div>
-            ))}
-          </div>
-      </div>
-  )
+    <>
+      <SessionWrapper>
+        {/* @ts-ignore*/}
+        <AuthProviders/>
+      </SessionWrapper>
+    </>
+    )
 }
 
 export default page

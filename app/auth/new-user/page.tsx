@@ -1,6 +1,9 @@
+import { redirect } from 'next/navigation'
 import React from 'react'
 
-function page() {
+function page()
+{
+  redirect("/LandingPage")
   return (
     <div>page</div>
   )
