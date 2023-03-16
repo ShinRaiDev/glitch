@@ -1,3 +1,4 @@
+
 import "./globals.css";
 import  Providers  from "./providers";
 export const metadata = {
@@ -11,8 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-
+    <html data-theme="" lang="en"> {/*todo:Add change theme func*/}
       <Providers>
         <body className="">{children}</body>
       </Providers>

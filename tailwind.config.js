@@ -8,6 +8,16 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+ theme:{
+  extend:{
+    colors:{
+      "my-secondary":"#818cf8",
+      "my-neutral":"#1D1D25",
+      "my-base-100": "#1f2937",
+      "my-info": "#3b82f6",
+    },
+  }
+ },
   daisyui: {
     themes: [
       {
@@ -32,6 +42,8 @@ module.exports = {
 "error": "#F96784",
         },
       },
+      "dark",
+    "cupcake",
     ],
   },
   plugins: [
