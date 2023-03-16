@@ -1,7 +1,7 @@
 "use client"
+import { Button } from '@/components/Button'
 import { signIn } from 'next-auth/react'
 import React from 'react'
-import { Button } from '../Button'
 import { FaDiscord, FaGithub} from "react-icons/fa"
 
 export default function ProviderButton({ provider }: any) {

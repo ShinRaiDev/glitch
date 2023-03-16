@@ -1,27 +1,47 @@
-"use client"; //remove this
-import Image from "next/image";
-import { Inter } from "next/font/google";
+"use client"
+import React from "react";
+import { Button } from "@/components/Button";
+import {getSession, signIn} from "next-auth/react"
+import Timer from "./Timer";
+import SignInButton from "./signinButton";
+import { motion } from "framer-motion";
 
-import { signIn, useSession } from "next-auth/react";
-import Timer from "@/components/Timer";
-import Head from "next/head";
+function page() {
+  const session = getSession()
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
-  const { data: session } = useSession();
   return (
-    <>
-      <main>
-        
-        {session?.user?.name}
-        <button className="btn" onClick={() => signIn()}>
-          nigga this nigga that nigga cum nigga back
-        </button>
-        <div className="flex min-h-screen w-screen items-center justify-center">
-          <Timer></Timer>
+    <div className="flex min-h-full min-w-full flex-col items-center justify-between md:flex-row" 
+
+    >
+      <motion.div className=" mx-20 px-20 md:ml-20 md:mr-60 mt-[10%] p-3"
+        initial={{ opacity: 0,x:-120}}
+        animate={{ opacity: 100,x:0 }}
+        transition={{duration:1.5}}
+      >
+        <div className="p-2 text-7xl font-bold text-slate-300 ">Welcome</div>
+
+        <div className="mr-10 p-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod
+          quidem molestiae soluta earum voluptatem sed sint quo, reprehenderit
+          eius facilis quibusdam quis nam vitae? Perferendis veniam temporibus,
+          quos natus consequuntur veritatis harum enim autem quaerat facere
+          dolor sunt cum nostrum et tempore earum repellendus quidem doloribus
+          incidunt. Voluptatum, id!
         </div>
-      </main>
-    </>
+
+        <div className="p-2">
+          <SignInButton/>
+        </div>
+      </motion.div>
+      <motion.div className=" mx-24 mr-36 mt-20 p-5"
+        initial={{ opacity: 0,x:120}}
+        animate={{ opacity: 100,x:0}}
+        transition={{duration:1.5}}
+      >
+        <Timer />
+      </motion.div>
+    </div>
   );
 }
+
+export default page;

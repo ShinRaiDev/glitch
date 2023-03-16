@@ -1,6 +1,6 @@
 
 import React from 'react'
-import ProviderButton from "@/components/auth/ProviderButton"
+
 import SessionWrapper from './SessionWraper'
 import AuthProviders from './AuthProviders'
 import { getSession } from 'next-auth/react'
