@@ -11,8 +11,9 @@ export default function Home() {
   return (
     <main>
       {session?.user?.name}
-      
-    <button className='btn' onClick={()=>signIn()}>singh in </button>
+      <button className='btn' onClick={()=>signIn()}>
+        nigga this nigga that nigga cum nigga back
+      </button>
     </main>
   )
 }
