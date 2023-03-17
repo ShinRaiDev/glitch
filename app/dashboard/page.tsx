@@ -1,6 +1,5 @@
 "use client";
 import ShowUser from "./ShowUser";
-
 import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import axios from "axios";
@@ -43,8 +42,9 @@ function Page() {
     <>
       <div className="max-h-full max-w-full ">
         <div className="flex max-w-full justify-between">
-          <div className="flex flex-grow m-3">
+          <div className="flex flex-grow gap-2 m-3">
             <Link href={"/Home"} className="btn btn-primary">New Timer</Link>
+            <Link href={"/feed"} className="btn btn-primary">Feed</Link>
             <Link href="/leaderboard" onClick={()=>{setXP(calculateXP(calctime(Sessions!), calceff(Sessions!)))}} className=" btn btn-link btn-secondary">Leaderboard</Link>
           </div>
           <ShowUser xp={calculateXP(calctime(Sessions!), calceff(Sessions!))} />

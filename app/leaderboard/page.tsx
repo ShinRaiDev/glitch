@@ -33,7 +33,7 @@ export default function Page() {
       </thead>
       <tbody>
         {Leaders?.map((Leader:User,index)=>{
-          if(Leader.name===session?.user?.name)setIsWin(true)
+          // if(Leader.name===session?.user?.name)setIsWin(true)
           return(
             <tr key={Leader.id}>
               <th>{index+1}</th>
