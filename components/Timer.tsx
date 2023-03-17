@@ -4,13 +4,14 @@ import { useRouter, usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { TfiClose } from "react-icons/tfi";
+import { Button } from "./Button";
 
 function Timer() {
   const [hours, setHours] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
   const [TimerStatus, setTimerStatus] = useState<boolean>(false);
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(false);
   const [date, setdate] = useState(new Date());
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -49,7 +50,7 @@ function Timer() {
       description,
       efficiency: parseInt(efficiency),
       time: hours * 3600 + minutes * 60 + seconds,
-      isPublic:checked
+      isPublic: checked,
     });
   };
 
@@ -125,6 +126,7 @@ function Timer() {
             className="modal modal-bottom cursor-pointer sm:modal-middle"
           >
             <div className="relative h-5/6 w-9/12 rounded-xl border-4 border-primary bg-base-100 p-5 backdrop-blur-xl">
+              {" "}
               <label htmlFor=" ">
                 <h3 className="p-4 text-3xl font-bold">
                   Congratulations{" "}
@@ -148,9 +150,14 @@ function Timer() {
                     Hours <span className="text-primary">{minutes}</span> Mins{" "}
                     <span className="text-primary">{seconds}</span> Secs{" "}
                   </span>
-                  <div className="flex items-center mr-10 absolute right-10 top-1/2">
+                  <div className="absolute right-10 top-1/2 mr-10 flex items-center">
                     <span className="mr-5 text-xl">Post it Publicly</span>
-                    <input type="checkbox" className="toggle toggle-accent" checked={checked} onChange={()=>setChecked(!checked)}/>
+                    <input
+                      type="checkbox"
+                      className="toggle-accent toggle"
+                      checked={checked}
+                      onChange={() => setChecked(!checked)}
+                    />
                   </div>
                   <p className="mx-5 py-3 text-lg">Title</p>
                   <span>
