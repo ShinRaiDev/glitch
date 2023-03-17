@@ -26,4 +26,19 @@ export  function calceff(Sessions: StudySession[]) {
      totalEff += session.efficiency
    })
      return totalEff;
- }
+}
+ 
+export function secondsToHms(time: any) {
+  let t = time;
+  var d = Math.floor(t/86400)
+  var h = Math.floor((t % 86400) / 3600);
+  var m = Math.floor(((t % 86400) % 3600) / 60);
+  var s = Math.floor(((t % 86400) % 3600) % 60);
+
+  var dDisplay = d > 0 ? d : "00";
+  var hDisplay = h > 0 ? h : "00";
+  var mDisplay = m > 0 ? m : "00";
+  var sDisplay = s > 0 ? s : "00";
+  let arr = [dDisplay,hDisplay, mDisplay, sDisplay];
+  return arr;
+}
