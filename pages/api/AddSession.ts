@@ -1,13 +1,14 @@
 
 import { userFromEmail } from "@/lib/prisma/userIdFunc";
-import { PrismaClient , StudySession,User} from "@prisma/client";
+import { PrismaClient} from "@prisma/client";
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
-export default async (req, res) => {
+// eslint-disable-next-line import/no-anonymous-default-export
+export default async  (req:any, res:any) => {
     
     const data = req.body;
-
+  
     await prisma.studySession.create({
       data: {
         title:data.title,

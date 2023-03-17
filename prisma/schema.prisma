@@ -27,6 +27,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  xp            Int?
   studySession  StudySession[]
   accounts      Account[]
   sessions      Session[]
