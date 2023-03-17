@@ -1,11 +1,23 @@
 import ShowUser from "./ShowUser";
-
+import { PrismaClient} from '@prisma/client'
 import React from "react";
+import {getSession} from "next-auth/react"
 
-async function serverSideDash() {
-
-  return (<>
-    <div className="max-h-full max-w-full ">
+async function getUserdetails(context:any){
+  
+  const session = getSession(context)
+  console.log(session?.user);
+  console.log("adfasdfasdfasdfasdfasdf",session?.user);
+  
+  }
+  const prisma = new PrismaClient()
+  
+export default async function Page(){  
+  
+  await getUserdetails()
+  return (
+ <>
+   <div className="max-h-full max-w-full ">
       <div className="flex max-w-full justify-end">
         <ShowUser />
       </div>
@@ -37,8 +49,8 @@ async function serverSideDash() {
           <div className="radial-progress text-primary ml-5" style={{"--value":70}}>70%</div>
         </div> 
       </div>
-    </div></>
+    </div>
+  </>
   );
-}
 
-export default serverSideDash;
+}
