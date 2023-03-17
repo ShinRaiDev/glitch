@@ -8,33 +8,42 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  theme: {
+    extend: {
+      colors: {
+        "my-secondary": "#818cf8",
+        "my-neutral": "#1D1D25",
+        "my-base-100": "#1f2937",
+        "my-info": "#3b82f6",
+      },
+    },
+  },
   daisyui: {
     themes: [
       {
         mytheme: {
-        
-"primary": "#5eead4",
-        
-"secondary": "#818cf8",
-        
-"accent": "#a7f3d0",
-        
-"neutral": "#1D1D25",
-        
-"base-100": "#1f2937",
-        
-"info": "#3b82f6",
-        
-"success": "#4ade80",
-        
-"warning": "#fbbf24",
-        
-"error": "#F96784",
+          primary: "#5eead4",
+
+          secondary: "#818cf8",
+
+          accent: "#a7f3d0",
+
+          neutral: "#1D1D25",
+
+          "base-100": "#1f2937",
+
+          info: "#3b82f6",
+
+          success: "#4ade80",
+
+          warning: "#fbbf24",
+
+          error: "#F96784",
         },
       },
+      "dark",
+      "cupcake",
     ],
   },
-  plugins: [
-    require('daisyui'),
-  ],
-}
+  plugins: [require("daisyui")],
+};
