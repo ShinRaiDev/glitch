@@ -17,6 +17,7 @@ model StudySession {
   description String?
   title       String
   userEmail   String 
+  isPublic    Boolean?
   user        User @relation(fields: [userEmail],references: [email])
 }
 
