@@ -24,12 +24,8 @@ function Page() {
         <div className="p-2 text-7xl font-bold text-slate-300 ">Welcome</div>
 
         <div className="mr-10 p-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod
-          quidem molestiae soluta earum voluptatem sed sint quo, reprehenderit
-          eius facilis quibusdam quis nam vitae? Perferendis veniam temporibus,
-          quos natus consequuntur veritatis harum enim autem quaerat facere
-          dolor sunt cum nostrum et tempore earum repellendus quidem doloribus
-          incidunt. Voluptatum, id!
+        Hey there Llama user! Are you ready to tackle the day and make the most of your time with Llama by your side? Remember, Llama is here to help you stay on top of your tasks and make productivity a breeze.Just take it one step at a time, and before you know it, you'll have accomplished more than you thought possible Keep pushing forward and stay motivated together, you and Llama are capable of achieving amazing things!
+
         </div>
 
         <div className="p-2">
