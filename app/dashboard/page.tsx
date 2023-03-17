@@ -9,6 +9,7 @@ import SessionCard from "./card";
 import { Button } from "@/components/Button";
 import Link from "next/link";
 import TotalTime from "./TotalTime";
+import { BsFillClockFill } from "react-icons/bs";
 
 function Page() {
   const { data: session } = useSession();

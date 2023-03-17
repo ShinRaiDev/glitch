@@ -4,7 +4,8 @@ import { StudySession, User } from "@prisma/client";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-// import { secondsToHms } from "@/lib/utils/utils";
+import { calculateXP } from "@/lib/utils/utils";
+import { secondsToHms } from "@/lib/utils/utils";
 
 export default function SessionCard({ props }: any) {
   const [user,setUser]=useState<User>()
@@ -26,7 +27,7 @@ export default function SessionCard({ props }: any) {
   }, [])
   
 
-//   const hms = secondsToHms(props.time);
+  const hms = secondsToHms(props.time);
   return (
     <div className="card w-96 bg-primary text-base-100 shadow-xl">
       <div className="flex items-center my-2 mx-3 bg-secondary rounded-xl">
@@ -48,11 +49,13 @@ export default function SessionCard({ props }: any) {
           {props.description}
         </span>
         <div className="card-actions m-3 flex flex-col items-end justify-end px-3 py-2 text-lg">
-          <span>Efficiency: {props.efficiency}</span>
+          {/* @ts-ignore*/}
+          XP Earned: {parseInt(calculateXP(props.time,props.efficiency))}
+          {/* <span>Efficiency: {props.efficiency}</span> */}
           <span>
-            Time Spent: {props.time}
-            {/* {hms[0]}:{hms[1]}:{hms[2]} */}
-          </span>
+            Time Spent: 
+            {hms[1]}:{hms[2]}:{hms[3]}
+          </span> 
         </div>
       </div>
     </div>

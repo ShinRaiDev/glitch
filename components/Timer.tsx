@@ -150,7 +150,7 @@ function Timer() {
                   </span>
                   <div className="flex items-center mr-10 absolute right-10 top-1/2">
                     <span className="mr-5 text-xl">Post it Publicly</span>
-                    <input type="checkbox" className="toggle toggle-accent" checked={checked} onChange={()=>setChecked(!checked)}/>
+                    <input type="checkbox" className="toggle toggle-accent" checked={checked} onChange={() => setChecked(!checked)} />
                   </div>
                   <p className="mx-5 py-3 text-lg">Title</p>
                   <span>
