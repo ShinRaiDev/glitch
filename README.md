@@ -104,7 +104,7 @@ npx prisma migrate deploy
 npm run dev
 ```
 
-
+#screenshots
 ![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled.png)
 ![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled2.png)
 ![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled3.png)
