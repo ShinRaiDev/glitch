@@ -4,11 +4,11 @@ import { PrismaClient , StudySession,User} from "@prisma/client";
 
 const prisma = new PrismaClient()
 
-export default async (req, res) => {
+export default async function (req, res){
     
     const data = req.body;
-
-    await prisma.studySession.create({
+    try{ 
+    await prisma.StudySession.create({
       data: {
         title:data.title,
         description:data.description,
@@ -17,7 +17,10 @@ export default async (req, res) => {
         userEmail:data.email
       }
   
-    })
+    })}
+    catch(e){
+      console.log(e);
+    }
   
   res.send(200)
     

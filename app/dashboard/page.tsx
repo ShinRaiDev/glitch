@@ -3,18 +3,12 @@ import { PrismaClient} from '@prisma/client'
 import React from "react";
 import {getSession} from "next-auth/react"
 
-async function getUserdetails(context:any){
+
   
-  const session = getSession(context)
-  console.log(session?.user);
-  console.log("adfasdfasdfasdfasdfasdf",session?.user);
+export default async function Page(context:any){  
   
-  }
-  const prisma = new PrismaClient()
-  
-export default async function Page(){  
-  
-  await getUserdetails()
+
+
   return (
  <>
    <div className="max-h-full max-w-full ">
