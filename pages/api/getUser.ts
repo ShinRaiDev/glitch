@@ -9,21 +9,14 @@ export default async  (req:any, res:any) => {
     
     const data = req.body;
   
-    await prisma.studySession.create({
-      data: {
-        title:data.title,
-        description:data.description,
-        efficiency:data.efficiency,
-        time:data.time,
-        userEmail:data.email,
-        isPublic:data.isPublic
-
-      }
-  
+    const result = await prisma.user.findFirst({
+        where:{
+            email:data.email
+        }
     })
   
   
-  res.send(200)
+  res.send(result)
     
     
 }
