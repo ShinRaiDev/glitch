@@ -56,11 +56,7 @@ function Page() {
               Don't Watch The Clock ; Do What It Does , Keep Going!!
             </div>
             <div className="mr-48 mt-10 pl-10 pr-16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              reiciendis vero qui incidunt numquam pariatur mollitia deleniti sint
-              corrupti vel, odio ea quasi ut ullam exercitationem placeat, beatae
-              fuga voluptates cum quos! Nostrum, suscipit ipsa iure minima soluta
-              saepe illo.
+            Hey there Llama user! Are you ready to tackle the day and make the most of your time with Llama by your side? Remember, Llama is here to help you stay on top of your tasks and make productivity a breeze.Just take it one step at a time, and before you know it, you'll have accomplished more than you thought possible Keep pushing forward and stay motivated together, you and Llama are capable of achieving amazing things!
             </div>
           </div>
           <div className="flex">
