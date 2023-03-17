@@ -10,6 +10,7 @@ function Timer() {
   const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
   const [TimerStatus, setTimerStatus] = useState<boolean>(false);
+  const [checked, setChecked] = useState(false)
   const [date, setdate] = useState(new Date());
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -48,6 +49,7 @@ function Timer() {
       description,
       efficiency: parseInt(efficiency),
       time: hours * 3600 + minutes * 60 + seconds,
+      isPublic:checked
     });
   };
 
@@ -146,6 +148,10 @@ function Timer() {
                     Hours <span className="text-primary">{minutes}</span> Mins{" "}
                     <span className="text-primary">{seconds}</span> Secs{" "}
                   </span>
+                  <div className="flex items-center mr-10 absolute right-10 top-1/2">
+                    <span className="mr-5 text-xl">Post it Publicly</span>
+                    <input type="checkbox" className="toggle toggle-accent" checked={checked} onChange={()=>setChecked(!checked)}/>
+                  </div>
                   <p className="mx-5 py-3 text-lg">Title</p>
                   <span>
                     <input

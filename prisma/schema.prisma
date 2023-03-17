@@ -17,6 +17,7 @@ model StudySession {
   description String?
   title       String
   userEmail   String 
+  isPublic    Boolean?
   user        User @relation(fields: [userEmail],references: [email])
 }
 
@@ -27,6 +28,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  xp            Int?
   studySession  StudySession[]
   accounts      Account[]
   sessions      Session[]
