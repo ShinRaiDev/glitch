@@ -103,3 +103,6 @@ npx prisma migrate deploy
 ```
 npm run dev
 ```
+
+
+#Screenshots are in the screenshot folder
