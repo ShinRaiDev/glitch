@@ -105,11 +105,4 @@ npm run dev
 ```
 
 
-![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled.png)
-![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled2.png)
-![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled3.png)
-![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled5.png)
-![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled7.png)
-![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled8.png)
-![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled9.png)
-![ScreenShot](https://github.com/ShinRaiDev/glitch/main/screenshots/untitled11.png)
+#Screenshots are in the screenshot folder
