@@ -73,33 +73,33 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## 🔒 Sample Env File 
 
-'''
+```
 DATABASE_URL="mysql://root:mysecretpassword@localhost:3306/glitch?schema=public"
 GITHUB_ID="1234567890abcdefg"
 GITHUB_SECRET="a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0"
 DISCORD_CLIENT_ID="0987654321gfedcba"
 DISCORD_CLIENT_SECRET="0t9s8r7q6p5o4n3m2l1k0j9i8h7g6f5e4d3c2b1"
 
-'''
+```
 
 ## How to run it Locally:
 
 ###Install the dependencies by running:
-'''
+```
 
 npm i
 
-'''
+```
 ###Generate Prisma client by running:
-'''
+```
 npx prisma generate
 
-'''
+```
 ###Deploy Prisma migrations by running:
-'''
+```
 npx prisma migrate deploy
 
 ###Start the development server by running:
-'''
+```
 npm run dev
-'''
+```
