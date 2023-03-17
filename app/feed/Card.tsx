@@ -30,7 +30,7 @@ export default function SessionCard({ props }: any) {
   const hms = secondsToHms(props.time);
   return (
     <div className="card w-96 bg-primary text-base-100 shadow-xl">
-      <div className="flex items-center my-2 mx-3 bg-secondary rounded-xl">
+      <div className="flex items-center my-2 mx-3 bg-secondary rounded-xl p-3">
         <div className="h-10 w-10 ml-4 overflow-hidden rounded-full outline outline-1 mr-3  ">
         {
           <Image
