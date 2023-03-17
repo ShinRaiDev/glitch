@@ -1,12 +1,10 @@
-import { redirect } from 'next/navigation'
-import React from 'react'
+import { redirect } from "next/navigation";
 
-function page()
-{
-  redirect("/LandingPage")
-  return (
-    <div>page</div>
-  )
+import React from "react";
+
+function page() {
+  redirect("/Home");
+  return <div>page</div>;
 }
 
-export default page
+export default page;

@@ -11,14 +11,15 @@ generator client {
 }
 
 model StudySession {
-  id          String   @unique @default(cuid())
-  time        DateTime
-  effeciency  Int
-  description String
+  id          String   @default(uuid()) @unique
+  time        Int 
+  efficiency  Int
+  description String?
   title       String
-  userId      String @unique
-  user        User @relation(fields: [userId],references: [id])
+  userEmail   String 
+  user        User @relation(fields: [userEmail],references: [email])
 }
+
 
 model User {
   id            String    @id @default(cuid()) 
