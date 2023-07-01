@@ -2,5 +2,9 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "WillLuke.nextjs.addTypesOnSave": true,
-  "WillLuke.nextjs.hasPrompted": true
+  "WillLuke.nextjs.hasPrompted": true,
+  "workbench.colorCustomizations": {
+    "[Shades of Purple (Super Dark)]": {}
+  },
+  "workbench.settings.editor": "json"
 }

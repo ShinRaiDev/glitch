@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html data-theme="mytheme" lang="en">
+    <html data-theme="cupcake" lang="en">
       {" "}
       {/*todo:Add change theme func*/}
       <Providers>
