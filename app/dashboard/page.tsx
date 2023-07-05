@@ -11,7 +11,7 @@ import Link from "next/link";
 import TotalTime from "./TotalTime";
 import { BsFillClockFill } from "react-icons/bs";
 
-function Page() {
+export default function Page() {
   const { data: session } = useSession();
   const [Sessions, setSessions] = useState<StudySession[]>();
 
@@ -89,4 +89,4 @@ function Page() {
     </>
   );
         }
-export default Page;
+

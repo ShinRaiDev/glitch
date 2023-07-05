@@ -1,6 +1,5 @@
  "use client"
 import Timer from "@/components/Timer";
-import { redirect, useRouter } from "next/navigation";
 import { getSession, useSession , signOut} from "next-auth/react";
 import { Button } from "@/components/Button";
 
