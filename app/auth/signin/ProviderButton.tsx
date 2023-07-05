@@ -15,9 +15,7 @@ useEffect(() => {
     return (
       <Button
         className="bg-my-neutral text-white hover:bg-my-base-100"
-        onclick={() => signIn(provider.id, {
-          callbackUrl:redirectUrl
-        })}
+        onclick={() => signIn(provider.id,{redirect:false})}
       >
         <FaGithub className="mr-3 text-xl text-orange-400" /> Sign in with{" "}
         {provider.name}
@@ -27,9 +25,7 @@ useEffect(() => {
     return (
       <Button
         className="bg-my-secondary text-white hover:bg-my-info"
-        onclick={() => signIn(provider.id, {
-          callbackUrl:redirectUrl
-        })}
+        onclick={() => signIn(provider.id,{redirect:false})}
       >
         <FaDiscord className="mr-3 text-xl" /> Sign in with {provider.name}
       </Button>
