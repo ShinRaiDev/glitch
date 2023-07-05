@@ -7,7 +7,7 @@ import { getSession } from 'next-auth/react'
 export const revalidate = 1;
 async function page() {
   const session = await getSession()
-  if(!session?.user)
+  if (!session?.user)
   return (
     <>
       <SessionWrapper>
